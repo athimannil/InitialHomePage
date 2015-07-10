@@ -7,11 +7,17 @@ $light-green: #73ad34;
 $nav-color: $secondary-color;
 
 
-$footer-bg: #0154ae;
-
+// Typography
+$fontPath: "../fonts";
+$baseFont: 'avalon';
+$baseFontWeight: 400;
+$baseFontColor: $primary-color;
 
 
 $annual-report-bg: #d5dadf;
 $news-report-bg: #f1f4f6;
 $news-report-border: $annual-report-bg;
 $date-bg: #a8afb7;
+
+
+$footer-bg: #0154ae;

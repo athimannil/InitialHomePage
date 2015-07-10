@@ -2,12 +2,19 @@
 Project:	A101 - Technical Task
 Author: 	Muhammed Athimannil
 ============================== */
+@font-face {
+  font-family: "avalon";
+  src: url("../fonts/avalon-plain.eot");
+  src: url("../fonts/avalon-plain.eot?#iefix") format("embedded-opentype"), url("../fonts/avalon-plain.ttf") format("truetype"), url("../fonts/avalon-plain.svg#avalon") format("svg");
+  font-style: normal;
+  font-weight: 400; }
 html {
-  font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
 body {
+  font-family: "avalon", sans-serif;
+  font-size: 12px;
   background-color: #fff;
   color: #263a54; }
 
@@ -77,27 +84,86 @@ footer {
 #logo {
   float: left; }
 
+.contact {
+  float: right; }
+  .contact li {
+    display: inline-block;
+    margin-left: 33px;
+    color: #003e7e; }
+    .contact li:last-child {
+      margin-left: 50px; }
+    .contact li a {
+      color: #003e7e; }
+
+.connect {
+  float: right;
+  margin: 30px 0; }
+  .connect input[type=search] {
+    float: right;
+    height: 45px;
+    width: 385px;
+    padding: 15px;
+    background-color: #c5cdd1;
+    border: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .connect input[type=search]::-webkit-input-placeholder {
+      color: #fff; }
+    .connect input[type=search]:-moz-placeholder {
+      /* Firefox 18- */
+      color: #fff;
+      opacity: 1; }
+    .connect input[type=search]::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #fff;
+      opacity: 1; }
+    .connect input[type=search]:-ms-input-placeholder {
+      color: #fff; }
+
+.social-media {
+  margin-top: 7px;
+  float: right; }
+  .social-media li {
+    display: inline-block;
+    margin: 0 17px; }
+    .social-media li a {
+      display: block;
+      width: 32px;
+      height: 32px;
+      -webkit-border-radius: 16px;
+      -moz-border-radius: 16px;
+      border-radius: 16px;
+      background-color: #c5cdd1;
+      background-position: center center;
+      background-repeat: no-repeat; }
+      .social-media li a.facebook:hover {
+        background-color: #3B5998; }
+      .social-media li a.twitter:hover {
+        background-color: #00ACED; }
+      .social-media li a.gplus:hover {
+        background-color: #D14836; }
+      .social-media li a.rss:hover {
+        background-color: #FF8300; }
+
 nav {
   width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 20px; }
   nav ul {
     float: right; }
     nav ul li {
-      float: left;
+      display: inline-block;
       margin-left: 20px; }
       nav ul li a {
         color: #003e7e;
-        text-decoration: none;
         text-transform: uppercase; }
 
 .carousel {
   width: 100%;
-  height: 635px;
-  margin-bottom: 45px;
-  border: 1px solid #ccc;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  margin-bottom: 45px; }
   .carousel .main-carousel {
     float: left;
     background-color: #003e7e; }
@@ -118,39 +184,58 @@ nav {
     .carousel .rest-carousel .brief {
       float: left;
       width: 50%;
-      color: #fff; }
+      color: #fff;
+      padding: 40px;
+      line-height: 14px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+      .carousel .rest-carousel .brief:first-child {
+        background-color: #263a54; }
+      .carousel .rest-carousel .brief h2 {
+        font-size: 30px; }
+    .carousel .rest-carousel.second-sect .brief {
+      background-color: #263a54; }
+    .carousel .rest-carousel.third-sect .brief {
+      background-color: #d5dadf; }
 
 .company {
   color: #263a54;
   margin-bottom: 45px; }
   .company > div {
     float: left;
+    width: 25%;
+    height: 542px;
+    padding: 37px 33px 25px;
+    position: relative;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-  .company .company-report .date,
-  .company .company-report a {
-    color: #73ad34; }
+    .company > div h3 {
+      font-size: 30px;
+      margin: 0 0 23px; }
+  .company .company-report {
+    padding-bottom: 7px; }
+    .company .company-report h4 {
+      font-size: 14px;
+      margin-bottom: 0; }
+    .company .company-report .date,
+    .company .company-report a {
+      font-size: 11px;
+      color: #73ad34; }
   .company .report {
-    width: 25%;
-    height: 545px;
-    background-color: #d5dadf;
-    padding: 25px;
-    position: relative; }
+    background-color: #d5dadf; }
   .company .news {
-    width: 25%;
-    height: 545px;
-    background-color: #f1f4f6;
-    padding: 25px;
-    position: relative; }
+    background-color: #f1f4f6; }
     .company .news .company-report {
       border-bottom: 1px solid #d5dadf; }
   .company .events {
     width: 50%;
-    color: #fff; }
+    color: #fff;
+    padding: 0; }
     .company .events > div {
       width: 50%;
-      height: 300px;
+      height: 272px;
       float: left;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
@@ -185,13 +270,16 @@ nav {
   .footer-menu > div {
     width: 25%;
     float: left;
-    padding: 50px;
+    padding: 20px 50px 30px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
+    .footer-menu > div h4 {
+      font-size: 24px;
+      margin: 30px 0 20px; }
     .footer-menu > div li {
       border-bottom: 2px solid #0064cb;
-      padding: 10px 0; }
+      padding: 17px 0 10px; }
       .footer-menu > div li a {
         color: #fff; }
 
@@ -210,7 +298,7 @@ footer {
     float: left;
     padding: 16px 0 0 30px; }
     footer .footer-link li {
-      float: left;
+      display: inline-block;
       border-left: 1px solid #fff;
       padding: 0 10px; }
       footer .footer-link li:first-child {

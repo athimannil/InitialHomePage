@@ -1,9 +1,9 @@
 .carousel{
 	width: 100%;
-	height: 635px;
+	// height: 635px;
 	margin-bottom: 45px;
-	border: 1px solid #ccc;
-	@include boxsizing;
+	// border: 1px solid #ccc;
+	// @include boxsizing;
 	.main-carousel{
 		float: left;
 		background-color: $secondary-color;
@@ -29,6 +29,25 @@
 			float: left;
 			width: 50%;
 			color: $white;
+			padding: 40px;
+			line-height: 14px;
+			@include boxsizing;
+			&:first-child{
+				background-color: #263a54;
+			}
+			h2{
+				font-size: 30px;
+			}
+		}
+		&.second-sect{
+			.brief{
+				background-color: #263a54;
+			}
+		}
+		&.third-sect{
+			.brief{
+				background-color: #d5dadf;
+			}
 		}
 	}
 }

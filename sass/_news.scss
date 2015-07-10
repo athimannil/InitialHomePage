@@ -3,28 +3,33 @@
 	margin-bottom: 45px;
 	& > div{
 		float: left;
-		// border: 1px solid #f00;
+		width: 25%;
+		height: 542px;
+		padding: 37px 33px 25px;
+		position: relative;
 		@include boxsizing;
+		h3{
+			font-size: 30px;
+			margin: 0 0 23px;
+		}
 	}
 	.company-report{
+		padding-bottom: 7px;
+		h4{
+			font-size: 14px;
+			margin-bottom: 0;
+		}
 		.date,
 		a{
+			font-size: 11px;
 			color: $light-green;
 		}
 	}
 	.report{
-		width: 25%;
-		height: 545px;
 		background-color: $annual-report-bg;
-		padding: 25px;
-		position: relative;
 	}
 	.news{
-		width: 25%;
-		height: 545px;
 		background-color: $news-report-bg;
-		padding: 25px;
-		position: relative;
 		.company-report{
 			border-bottom: 1px solid $news-report-border;
 		}
@@ -32,9 +37,10 @@
 	.events{
 		width: 50%;
 		color: $white;
+		padding: 0;
 		> div{
 			width: 50%;
-			height: 300px;
+			height: 272px;
 			float: left;
 			// border: 1px solid #ff0;
 			@include boxsizing;
