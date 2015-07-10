@@ -139,14 +139,22 @@ footer {
       background-color: #c5cdd1;
       background-position: center center;
       background-repeat: no-repeat; }
-      .social-media li a.facebook:hover {
-        background-color: #3B5998; }
-      .social-media li a.twitter:hover {
-        background-color: #00ACED; }
-      .social-media li a.gplus:hover {
-        background-color: #D14836; }
-      .social-media li a.rss:hover {
-        background-color: #FF8300; }
+      .social-media li a.facebook {
+        background-image: url(../img/facebook.png); }
+        .social-media li a.facebook:hover {
+          background-color: #3B5998; }
+      .social-media li a.twitter {
+        background-image: url(../img/twitter.png); }
+        .social-media li a.twitter:hover {
+          background-color: #00ACED; }
+      .social-media li a.gplus {
+        background-image: url(../img/gplus.png); }
+        .social-media li a.gplus:hover {
+          background-color: #D14836; }
+      .social-media li a.rss {
+        background-image: url(../img/rss.png); }
+        .social-media li a.rss:hover {
+          background-color: #FF8300; }
 
 nav {
   width: 100%;
@@ -235,7 +243,7 @@ nav {
     padding: 0; }
     .company .events > div {
       width: 50%;
-      height: 272px;
+      height: 271px;
       float: left;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;

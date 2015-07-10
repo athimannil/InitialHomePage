@@ -55,25 +55,29 @@
 			display: block;
 			@include circle(32px);
 			background-color: #c5cdd1;
-      background-position: center center;
-      background-repeat: no-repeat;
+			background-position: center center;
+			background-repeat: no-repeat;
 			// @include transition(all, 0.5s, ease-in);
 			&.facebook{
+				background-image: url(../img/facebook.png);
 				&:hover{
 					background-color: #3B5998;
 				}
 			}
 			&.twitter{
+				background-image: url(../img/twitter.png);
 				&:hover{
 					background-color: #00ACED;
 				}
 			}
 			&.gplus{
+				background-image: url(../img/gplus.png);
 				&:hover{
 					background-color: #D14836;
 				}
 			}
 			&.rss{
+				background-image: url(../img/rss.png);
 				&:hover{
 					background-color: #FF8300;
 				}
