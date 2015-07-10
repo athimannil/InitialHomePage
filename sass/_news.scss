@@ -1,15 +1,33 @@
-.news{
+.company{
 	color: $primary-color;
+	margin-bottom: 45px;
 	& > div{
 		float: left;
-		border: 1px solid #f00;
+		// border: 1px solid #f00;
 		@include boxsizing;
+	}
+	.company-report{
+		.date,
+		a{
+			color: $light-green;
+		}
 	}
 	.report{
 		width: 25%;
+		height: 545px;
+		background-color: $annual-report-bg;
+		padding: 25px;
+		position: relative;
 	}
 	.news{
 		width: 25%;
+		height: 545px;
+		background-color: $news-report-bg;
+		padding: 25px;
+		position: relative;
+		.company-report{
+			border-bottom: 1px solid $news-report-border;
+		}
 	}
 	.events{
 		width: 50%;
@@ -18,7 +36,7 @@
 			width: 50%;
 			height: 300px;
 			float: left;
-			border: 1px solid #ff0;
+			// border: 1px solid #ff0;
 			@include boxsizing;
 		}
 		.title{
@@ -30,12 +48,26 @@
 			padding: 30px 25px;
 		}
 		.day{
-			background-color: #ccc;
+			background-color: $date-bg;
+			text-align: center;
+			.event-day{
+				font-size: 200px;
+				margin: 0;
+			}
+			.event-month{
+				margin: 0;
+				font-size: 25px;
+			}
 		}
 		.event{
 			padding: 50px 40px ;
 			.event-title{
 				color: $secondary-color;
+				font-size: 25px;
+				margin: 0;
+			}
+			.event-date{
+				color: $light-green;
 			}
 		}
 	}

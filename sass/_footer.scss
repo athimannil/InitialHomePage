@@ -1,4 +1,4 @@
-footer{
+.footer-menu{
 	background-color: $secondary-color;
 	color: $white;
 	> div{
@@ -8,8 +8,34 @@ footer{
 		@include boxsizing;
 
 		li{
-			border-bottom: 2px solid $darken-secondary;
+			border-bottom: 2px solid $lighten-secondary;
 			padding: 10px 0;
+			a{
+				color: $white;
+			}
+		}
+	}
+}
+footer{
+	width: 100%;
+	height: 70px;
+	background-color: $lighten-secondary;
+	color: $white;
+	padding: 0 20px;
+	@include boxsizing;
+	.copy-right{
+		float: left;
+	}
+	.footer-link{
+		float: left;
+		padding: 16px 0 0 30px;
+		li{
+			float: left;
+			border-left: 1px solid $white;
+			padding: 0 10px;
+			&:first-child{
+				border-left: none;
+			}
 			a{
 				color: $white;
 			}

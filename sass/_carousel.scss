@@ -4,4 +4,31 @@
 	margin-bottom: 45px;
 	border: 1px solid #ccc;
 	@include boxsizing;
+	.main-carousel{
+		float: left;
+		background-color: $secondary-color;
+		img{
+			float: left;
+			width: 50%;
+		}
+		.brief{
+			float: left;
+			width: 50%;
+			color: $white;
+		}
+	}
+	.rest-carousel{
+		width: 50%;
+		float: left;
+		background-color: $secondary-color;
+		img{
+			float: left;
+			width: 50%;
+		}
+		.brief{
+			float: left;
+			width: 50%;
+			color: $white;
+		}
+	}
 }
