@@ -1,3 +1,6 @@
 $body-bg: #fff;
-$text-color: #263a54;
-$nav-color: #003e7e;
+$primary-color: #263a54;
+$secondary-color: #003e7e;
+$darken-secondary: lighten($secondary-color, 10%);
+$white: #fff;
+$nav-color: $secondary-color;

@@ -1,0 +1,18 @@
+footer{
+	background-color: $secondary-color;
+	color: $white;
+	> div{
+		width: 25%;
+		float: left;
+		padding: 50px;
+		@include boxsizing;
+
+		li{
+			border-bottom: 2px solid $darken-secondary;
+			padding: 10px 0;
+			a{
+				color: $white;
+			}
+		}
+	}
+}

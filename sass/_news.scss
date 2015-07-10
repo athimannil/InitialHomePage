@@ -1,0 +1,42 @@
+.news{
+	color: $primary-color;
+	& > div{
+		float: left;
+		border: 1px solid #f00;
+		@include boxsizing;
+	}
+	.report{
+		width: 25%;
+	}
+	.news{
+		width: 25%;
+	}
+	.events{
+		width: 50%;
+		color: $white;
+		> div{
+			width: 50%;
+			height: 300px;
+			float: left;
+			border: 1px solid #ff0;
+			@include boxsizing;
+		}
+		.title{
+			background-color: $secondary-color;
+			padding: 35px;
+		}
+		.month{
+			background-color: $primary-color;
+			padding: 30px 25px;
+		}
+		.day{
+			background-color: #ccc;
+		}
+		.event{
+			padding: 50px 40px ;
+			.event-title{
+				color: $secondary-color;
+			}
+		}
+	}
+}
