@@ -1,0 +1,26 @@
+html {
+	font-family: sans-serif;
+  	-webkit-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+}
+body{
+	background-color: $body-bg;
+	color: $text-color;
+}
+a{
+	text-decoration: none;
+	&:active,
+	&:hover {
+	  outline: 0;
+	}
+}
+header,
+section{
+	width: 100%;
+	overflow: hidden;
+}
+.container{
+	width: 1280px;
+	margin: 0 auto;
+	padding: 30px 35px 35px;
+}
