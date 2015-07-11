@@ -2,7 +2,8 @@
 Project:	A101 - Technical Task
 Author: 	Muhammed Athimannil
 ============================== */
-.next, .carousel-next, .carousel-prev {
+.next, .carousel-next,
+.carousel-prev {
   display: inline-block;
   background-color: #fff;
   position: absolute;
@@ -14,7 +15,9 @@ Author: 	Muhammed Athimannil
   -webkit-border-radius: 17px;
   -moz-border-radius: 17px;
   border-radius: 17px; }
-  .next:after, .carousel-next:after, .carousel-prev:after, .next:before, .carousel-next:before, .carousel-prev:before {
+  .next:after, .carousel-next:after,
+  .carousel-prev:after, .next:before, .carousel-next:before,
+  .carousel-prev:before {
     border: 2px solid #263a54;
     content: '';
     -webkit-box-sizing: border-box;
@@ -43,56 +46,89 @@ Author: 	Muhammed Athimannil
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box; }
-  .next:after, .carousel-next:after, .carousel-prev:after {
+  .next:after, .carousel-next:after,
+  .carousel-prev:after {
     bottom: 6px;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg); }
-  .next:before, .carousel-next:before, .carousel-prev:before {
+  .next:before, .carousel-next:before,
+  .carousel-prev:before {
     top: 6px;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg); }
-  .next.large, .large.carousel-next, .large.carousel-prev {
+  .next.large, .large.carousel-next,
+  .large.carousel-prev {
     right: 20px;
     bottom: 20px; }
-  .next.small, .small.carousel-next, .small.carousel-prev {
+  .next.small, .small.carousel-next,
+  .small.carousel-prev {
     width: 10px;
     height: 10px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    background-color: #000;
     margin: auto;
     top: 0;
     right: 0;
     bottom: 0; }
-    .next.small:after, .small.carousel-next:after, .small.carousel-prev:after, .next.small:before, .small.carousel-next:before, .small.carousel-prev:before {
+    .next.small:after, .small.carousel-next:after,
+    .small.carousel-prev:after, .next.small:before, .small.carousel-next:before,
+    .small.carousel-prev:before {
       border-width: 1px;
-      border-color: #fff;
       width: 4px; }
-    .next.small:after, .small.carousel-next:after, .small.carousel-prev:after {
+    .next.small:after, .small.carousel-next:after,
+    .small.carousel-prev:after {
       bottom: 2px; }
-    .next.small:before, .small.carousel-next:before, .small.carousel-prev:before {
+    .next.small:before, .small.carousel-next:before,
+    .small.carousel-prev:before {
       top: 2px; }
 
-.carousel-next {
-  height: 60px;
-  right: 0;
+.carousel-next,
+.carousel-prev {
+  height: 50px;
   top: 0;
   bottom: 0;
-  margin: auto;
-  border-radius: 0; }
+  margin: auto; }
+
+.carousel-next {
+  right: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 2px;
+  -webkit-border-top-left-radius: 2px;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 2px;
+  -moz-border-radius-topleft: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
 
 .carousel-prev {
-  height: 60px;
-  top: 0;
-  bottom: 0;
   left: 0;
-  margin: auto;
-  border-radius: 0; }
+  -webkit-border-top-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 2px;
+  -moz-border-radius-bottomright: 2px;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
 
 .buble {
   position: relative; }
@@ -194,10 +230,22 @@ footer {
   float: right; }
   .contact li {
     display: inline-block;
+    height: 15px;
+    line-height: 18px;
     margin-left: 33px;
-    color: #003e7e; }
+    color: #003e7e;
+    padding-left: 20px;
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-image: url(../img/pointer.png); }
     .contact li:last-child {
       margin-left: 50px; }
+    .contact li.address {
+      background-image: url(../img/pointer.png); }
+    .contact li.mail {
+      background-image: url(../img/envelop.png); }
+    .contact li.telephone {
+      background-image: url(../img/telephone.png); }
     .contact li a {
       color: #003e7e; }
 
@@ -280,7 +328,6 @@ nav {
   margin-bottom: 45px; }
   .carousel .main-carousel {
     float: left;
-    background-color: #003e7e;
     position: relative; }
     .carousel .main-carousel img {
       float: left;
@@ -288,19 +335,19 @@ nav {
     .carousel .main-carousel .brief {
       float: left;
       width: 50%;
+      background-color: #003e7e;
       color: #fff; }
   .carousel .rest-carousel {
     width: 50%;
     float: left;
-    position: relative;
-    background-color: #003e7e; }
+    position: relative; }
     .carousel .rest-carousel img {
       float: left;
       width: 50%; }
     .carousel .rest-carousel .brief {
       float: left;
       width: 50%;
-      height: 290px;
+      height: 270px;
       color: #fff;
       padding: 40px;
       line-height: 14px;
@@ -350,7 +397,10 @@ nav {
       position: relative; }
       .company .company-report a span {
         position: relative;
-        margin-left: 10px; }
+        margin-left: 10px;
+        background-color: #73ad34; }
+        .company .company-report a span:after, .company .company-report a span:before {
+          border-color: #fff; }
   .company .report {
     background-color: #d5dadf; }
   .company .news {
@@ -410,7 +460,7 @@ nav {
       margin: 30px 0 20px; }
     .footer-menu > div li {
       border-bottom: 2px solid #0064cb;
-      padding: 17px 0 10px; }
+      padding: 17px 0 6px; }
       .footer-menu > div li a {
         color: #fff;
         display: block;
@@ -420,19 +470,20 @@ footer {
   width: 100%;
   background-color: #0064cb;
   color: #fff;
-  padding: 20px;
+  padding: 14px 20px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
   footer .copy-right {
-    float: left; }
+    float: left;
+    margin: 10px 0; }
   footer .footer-link {
     float: left;
-    padding: 12px 0 0 30px; }
+    padding: 10px 0 0 30px; }
     footer .footer-link li {
       display: inline-block;
       border-left: 1px solid #fff;
-      padding: 0 10px; }
+      padding: 0 5px; }
       footer .footer-link li:first-child {
         border-left: none; }
       footer .footer-link li a {

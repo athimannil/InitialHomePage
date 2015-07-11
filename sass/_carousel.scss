@@ -6,7 +6,6 @@
 	// @include boxsizing;
 	.main-carousel{
 		float: left;
-		background-color: $secondary-color;
 		position: relative;
 		img{
 			float: left;
@@ -15,6 +14,7 @@
 		.brief{
 			float: left;
 			width: 50%;
+			background-color: $secondary-color;
 			color: $white;
 		}
 	}
@@ -22,7 +22,7 @@
 		width: 50%;
 		float: left;
 		position: relative;
-		background-color: $secondary-color;
+		// background-color: $secondary-color;
 		img{
 			float: left;
 			width: 50%;
@@ -30,7 +30,7 @@
 		.brief{
 			float: left;
 			width: 50%;
-			height: 290px;
+			height: 270px;
 			color: $white;
 			padding: 40px;
 			line-height: 14px;

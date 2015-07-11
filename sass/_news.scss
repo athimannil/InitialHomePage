@@ -29,6 +29,11 @@
 			span{
 				position: relative;
 				margin-left: 10px;
+				background-color: $light-green;
+				&:after,
+				&:before{
+					border-color: $white;
+				}
 			}
 		}
 
