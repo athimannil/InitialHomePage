@@ -7,6 +7,7 @@
 	.main-carousel{
 		float: left;
 		background-color: $secondary-color;
+		position: relative;
 		img{
 			float: left;
 			width: 50%;
@@ -20,6 +21,7 @@
 	.rest-carousel{
 		width: 50%;
 		float: left;
+		position: relative;
 		background-color: $secondary-color;
 		img{
 			float: left;
@@ -28,6 +30,7 @@
 		.brief{
 			float: left;
 			width: 50%;
+			height: 290px;
 			color: $white;
 			padding: 40px;
 			line-height: 14px;
@@ -47,6 +50,18 @@
 		&.third-sect{
 			.brief{
 				background-color: #d5dadf;
+				&.buble-left{
+					&:after{
+						border-right-color: #d5dadf;
+					}
+				}
+			}
+			a{
+				background-color: $primary-color;
+				&:before,
+				&:after{
+					border-color: $white;
+				}
 			}
 		}
 	}

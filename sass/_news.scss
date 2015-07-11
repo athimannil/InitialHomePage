@@ -24,6 +24,14 @@
 			font-size: 11px;
 			color: $light-green;
 		}
+		a{
+			position: relative;
+			span{
+				position: relative;
+				margin-left: 10px;
+			}
+		}
+
 	}
 	.report{
 		background-color: $annual-report-bg;
@@ -56,8 +64,10 @@
 		.day{
 			background-color: $date-bg;
 			text-align: center;
+			padding-top: 30px;
 			.event-day{
 				font-size: 200px;
+				font-weight: bold;
 				margin: 0;
 			}
 			.event-month{
@@ -73,6 +83,7 @@
 				margin: 0;
 			}
 			.event-date{
+				font-weight: bold;
 				color: $light-green;
 			}
 		}
