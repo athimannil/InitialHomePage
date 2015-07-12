@@ -1,28 +1,42 @@
-.next{
+.icon{
 	display: inline-block;
-	background-color: $white;
-	// position: relative;
 	position: absolute;
-	@include boxsizing;
+    @include boxsizing;
+    @include transition(background-color, 0.25s);
+	&:after,
+	&:before {
+	    content: '';
+	    @include boxsizing;
+		@include transition(border-color, 0.25s);
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    margin: auto;
+		border: 2px solid $primary-color;
+		height: 0;
+		width: 12px;
+	}
+}
+.next{
+	background-color: $white;
 	@include circle(34px);
 	&:after,
 	&:before{
-		border: 2px solid $primary-color;
-		content: '';
-		@include boxsizing;
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		margin: auto;
-		height: 0;
-		width: 12px;
 		@include border-radius(2px, 2px, 2px, 2px);
 	}
 	&:after {
 	    bottom: 6px;
 		@include rotate(45);
+	}
+	&:hover:not(.small) {
+		background-color: $primary-color;
+		border: 2px solid $white;
+		&:after,
+		&:before {
+			border-color: $white;
+		}
 	}
 	&:before {
 	    top: 6px;
@@ -51,21 +65,53 @@
 		}
 	}
 }
-.carousel-next,
-.carousel-prev{
-	@extend .next;
+.carousel-arrow{
+	background-color: $white;
+	width: 34px;
 	height: 50px;
 	top: 0;
 	bottom: 0;
 	margin: auto;
+	&:after{
+	    bottom: 6px;
+	}
+	&:before {
+	    top: 6px;
+	}
+	&:hover{
+		background-color: $primary-color;
+		border: 2px solid $white;
+		&:after,
+		&:before {
+			border-color: $white;
+		}
+	}
 }
 .carousel-next{
 	right: 0;
 	@include border-radius(0, 0, 2px, 2px);
+	&:after {
+		@include rotate(45);
+	}
+	&:before {
+		@include rotate(-45);
+	}
+	&:hover{
+		border-right: none;
+	}
 }
 .carousel-prev{
 	left: 0;
 	@include border-radius(2px, 2px, 0, 0);
+	&:after {
+		@include rotate(-45);
+	}
+	&:before {
+		@include rotate(45);
+	}
+	&:hover{
+		border-left: none
+	}
 }
 .buble{
 	position: relative;
@@ -76,7 +122,6 @@
 		bottom: 0;
 		margin: auto;
 		border-color: transparent;
-	    // border-color: transparent  $primary-color transparent  transparent ;
 	    border-style: solid;
 	    border-width: 21px;
 	    width: 0;
@@ -99,22 +144,11 @@
 .plus {
     @include circle(24px);
     border: 2px solid $light-green;
-    display: inline-block;
-	position: absolute;
 	right: 20px;
 	bottom: 20px;
-    @include boxsizing;
 	&:after,
 	&:before {
 	    border: 1px solid $light-green;
-	    content: '';
-	    @include boxsizing;
-	    position: absolute;
-	    top: 0;
-	    right: 0;
-	    bottom: 0;
-	    left: 0;
-	    margin: auto;
 	}
 	&:after{
 		width: 0;
@@ -123,5 +157,12 @@
 	&:before{
 	    width: 12px;
 		height: 0;
-	} 
+	}
+	&:hover{
+		background-color: $light-green;
+		&:after,
+		&:before {
+			border-color: $white;
+		}
+	}
 }

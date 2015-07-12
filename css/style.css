@@ -2,35 +2,45 @@
 Project:	A101 - Technical Task
 Author: 	Muhammed Athimannil
 ============================== */
-.next, .carousel-next,
-.carousel-prev {
+.icon {
   display: inline-block;
-  background-color: #fff;
   position: absolute;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 34px;
-  height: 34px;
-  -webkit-border-radius: 17px;
-  -moz-border-radius: 17px;
-  border-radius: 17px; }
-  .next:after, .carousel-next:after,
-  .carousel-prev:after, .next:before, .carousel-next:before,
-  .carousel-prev:before {
-    border: 2px solid #263a54;
+  -webkit-transition: background-color 0.25s ease 0s;
+  -moz-transition: background-color 0.25s ease 0s;
+  -ms-transition: background-color 0.25s ease 0s;
+  -o-transition: background-color 0.25s ease 0s;
+  transition: background-color 0.25s ease 0s; }
+  .icon:after, .icon:before {
     content: '';
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-transition: border-color 0.25s ease 0s;
+    -moz-transition: border-color 0.25s ease 0s;
+    -ms-transition: border-color 0.25s ease 0s;
+    -o-transition: border-color 0.25s ease 0s;
+    transition: border-color 0.25s ease 0s;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     margin: auto;
+    border: 2px solid #263a54;
     height: 0;
-    width: 12px;
+    width: 12px; }
+
+.next {
+  background-color: #fff;
+  width: 34px;
+  height: 34px;
+  -webkit-border-radius: 17px;
+  -moz-border-radius: 17px;
+  border-radius: 17px; }
+  .next:after, .next:before {
     -webkit-border-top-right-radius: 2px;
     -webkit-border-bottom-right-radius: 2px;
     -webkit-border-bottom-left-radius: 2px;
@@ -46,26 +56,27 @@ Author: 	Muhammed Athimannil
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box; }
-  .next:after, .carousel-next:after,
-  .carousel-prev:after {
+  .next:after {
     bottom: 6px;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg); }
-  .next:before, .carousel-next:before,
-  .carousel-prev:before {
+  .next:hover:not(.small) {
+    background-color: #263a54;
+    border: 2px solid #fff; }
+    .next:hover:not(.small):after, .next:hover:not(.small):before {
+      border-color: #fff; }
+  .next:before {
     top: 6px;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg); }
-  .next.large, .large.carousel-next,
-  .large.carousel-prev {
+  .next.large {
     right: 20px;
     bottom: 20px; }
-  .next.small, .small.carousel-next,
-  .small.carousel-prev {
+  .next.small {
     width: 10px;
     height: 10px;
     -webkit-border-radius: 5px;
@@ -75,24 +86,30 @@ Author: 	Muhammed Athimannil
     top: 0;
     right: 0;
     bottom: 0; }
-    .next.small:after, .small.carousel-next:after,
-    .small.carousel-prev:after, .next.small:before, .small.carousel-next:before,
-    .small.carousel-prev:before {
+    .next.small:after, .next.small:before {
       border-width: 1px;
       width: 4px; }
-    .next.small:after, .small.carousel-next:after,
-    .small.carousel-prev:after {
+    .next.small:after {
       bottom: 2px; }
-    .next.small:before, .small.carousel-next:before,
-    .small.carousel-prev:before {
+    .next.small:before {
       top: 2px; }
 
-.carousel-next,
-.carousel-prev {
+.carousel-arrow {
+  background-color: #fff;
+  width: 34px;
   height: 50px;
   top: 0;
   bottom: 0;
   margin: auto; }
+  .carousel-arrow:after {
+    bottom: 6px; }
+  .carousel-arrow:before {
+    top: 6px; }
+  .carousel-arrow:hover {
+    background-color: #263a54;
+    border: 2px solid #fff; }
+    .carousel-arrow:hover:after, .carousel-arrow:hover:before {
+      border-color: #fff; }
 
 .carousel-next {
   right: 0;
@@ -111,6 +128,18 @@ Author: 	Muhammed Athimannil
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box; }
+  .carousel-next:after {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg); }
+  .carousel-next:before {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg); }
+  .carousel-next:hover {
+    border-right: none; }
 
 .carousel-prev {
   left: 0;
@@ -129,6 +158,18 @@ Author: 	Muhammed Athimannil
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box; }
+  .carousel-prev:after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg); }
+  .carousel-prev:before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg); }
+  .carousel-prev:hover {
+    border-left: none; }
 
 .buble {
   position: relative; }
@@ -157,31 +198,20 @@ Author: 	Muhammed Athimannil
   -moz-border-radius: 12px;
   border-radius: 12px;
   border: 2px solid #73ad34;
-  display: inline-block;
-  position: absolute;
   right: 20px;
-  bottom: 20px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  bottom: 20px; }
   .plus:after, .plus:before {
-    border: 1px solid #73ad34;
-    content: '';
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto; }
+    border: 1px solid #73ad34; }
   .plus:after {
     width: 0;
     height: 12px; }
   .plus:before {
     width: 12px;
     height: 0; }
+  .plus:hover {
+    background-color: #73ad34; }
+    .plus:hover:after, .plus:hover:before {
+      border-color: #fff; }
 
 @font-face {
   font-family: "avalon";
@@ -473,6 +503,10 @@ input[type="search"]::-webkit-search-decoration {
     border: 1px solid #263a54;
     background-color: #365277;
     vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }

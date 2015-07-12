@@ -45,3 +45,16 @@
     -moz-background-clip: padding;
     background-clip: padding-box;
 }
+@mixin transition($transitionProperty:all, $transitionTime:0.3s, $method:ease, $transitionDelay:0s) {
+  -webkit-transition: $transitionProperty $transitionTime $method $transitionDelay;
+     -moz-transition: $transitionProperty $transitionTime $method $transitionDelay;
+      -ms-transition: $transitionProperty $transitionTime $method $transitionDelay;
+       -o-transition: $transitionProperty $transitionTime $method $transitionDelay;
+          transition: $transitionProperty $transitionTime $method $transitionDelay;
+}
+@mixin userselect{
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
