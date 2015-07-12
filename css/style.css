@@ -300,6 +300,8 @@ footer {
   position: relative; }
 
 #move-top {
+  display: none;
+  cursor: pointer;
   position: fixed;
   right: 20px;
   bottom: 20px; }

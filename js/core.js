@@ -5,7 +5,7 @@
     }, 'slow');
   });
 });*/
-$("#move-top").hide();
+// $("#move-top").hide();
 // fade in #move-top
 $(function () {
 	$(window).scroll(function () {
@@ -19,7 +19,7 @@ $(function () {
 	$('#move-top').click(function () {
 		$('body,html').animate({
 			scrollTop: 0
-		}, 800);
+		}, 'slow');
 		// return false;
 	});
 });
