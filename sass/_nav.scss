@@ -16,7 +16,7 @@ nav{
 				display: inline-block;
 				color: $nav-color;
 				text-transform: uppercase;
-				padding: 10px;
+				padding: 10px 10px 8px;
 				background-color: $white;
 				white-space: nowrap;
 				@include transition(all, 0.25s, ease-out);
@@ -25,35 +25,36 @@ nav{
 					color: $white;
 				}
 				&.arrow-down{
-
-
+					padding-right: 25px;
+					&:before, 
+					&:after{ 
+						display:block;
+					    content: '';
+					    @include boxsizing;
+					    @include transition(all, 0.25s, ease-out);
+					    position: absolute;
+					    top: 0px;
+					    bottom: 0px;
+					    margin: auto;
+					    border: 1px solid #263A54;
+					    height: 0px;
+					    width: 7px;
+					}
+					&:after{
+						right: 11px;
+						@include rotate(45);
+					}
+					&:before{
+						right: 7px;
+						@include rotate(-45);
+					}
+					&:hover{
 						&:before, 
-						&:after{ 
-								display:block;
-						    content: "";
-						    // box-sizing: border-box;
-						    // transition: border-color 0.25s ease 0s;
-						    position: absolute;
-						    top: 0px;
-						    right: 0px;
-						    bottom: 0px;
-						    margin: auto;
-						    border: 2px solid #263A54;
-						    height: 0px;
-						    width: 12px;
-						}
 						&:after{
-							bottom: 6px;
-							@include rotate(45);
+							border-color: $white;
 						}
-						&:before{
-							top: 6px;
-							@include rotate(-45);
-						}
-
+					}
 				}
-
-
 			}
 		}
 		ul{

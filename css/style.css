@@ -359,7 +359,7 @@ nav {
         display: inline-block;
         color: #003e7e;
         text-transform: uppercase;
-        padding: 10px;
+        padding: 10px 10px 8px;
         background-color: #fff;
         white-space: nowrap;
         -webkit-transition: all 0.25s ease-out 0s;
@@ -370,29 +370,40 @@ nav {
         nav > ul li a:hover {
           background-color: #263a54;
           color: #fff; }
-        nav > ul li a.arrow-down:before, nav > ul li a.arrow-down:after {
-          display: block;
-          content: "";
-          position: absolute;
-          top: 0px;
-          right: 0px;
-          bottom: 0px;
-          margin: auto;
-          border: 2px solid #263A54;
-          height: 0px;
-          width: 12px; }
-        nav > ul li a.arrow-down:after {
-          bottom: 6px;
-          -webkit-transform: rotate(45deg);
-          -moz-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-          -o-transform: rotate(45deg); }
-        nav > ul li a.arrow-down:before {
-          top: 6px;
-          -webkit-transform: rotate(-45deg);
-          -moz-transform: rotate(-45deg);
-          -ms-transform: rotate(-45deg);
-          -o-transform: rotate(-45deg); }
+        nav > ul li a.arrow-down {
+          padding-right: 25px; }
+          nav > ul li a.arrow-down:before, nav > ul li a.arrow-down:after {
+            display: block;
+            content: '';
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all 0.25s ease-out 0s;
+            -moz-transition: all 0.25s ease-out 0s;
+            -ms-transition: all 0.25s ease-out 0s;
+            -o-transition: all 0.25s ease-out 0s;
+            transition: all 0.25s ease-out 0s;
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            margin: auto;
+            border: 1px solid #263A54;
+            height: 0px;
+            width: 7px; }
+          nav > ul li a.arrow-down:after {
+            right: 11px;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg); }
+          nav > ul li a.arrow-down:before {
+            right: 7px;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg); }
+          nav > ul li a.arrow-down:hover:before, nav > ul li a.arrow-down:hover:after {
+            border-color: #fff; }
     nav > ul ul {
       display: none;
       position: absolute;
