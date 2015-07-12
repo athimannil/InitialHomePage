@@ -1,0 +1,26 @@
+.calendar{
+  font-weight: bold;
+  text-align:center;
+  border-spacing: 0;
+  empty-cells: hide;
+  margin: auto;
+  th{
+    height: 30px;
+    vertical-align: top;
+  }
+  td{
+    width: 35px;
+    height: 35px;
+    border: 1px solid $primary-color;
+    background-color: lighten($primary-color, 10%);
+    vertical-align: middle;
+    @include boxsizing;
+    &:nth-last-child(1),
+    &:nth-last-child(2){
+      background-color: lighten($primary-color, 15%);
+    }
+    &.event-day{
+      background-color: $light-green;
+    }
+  }
+}

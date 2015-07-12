@@ -363,7 +363,6 @@ input[type="search"]::-webkit-search-decoration {
   width: 50%;
   float: left; }
   .rest-carousel .brief {
-    width: 50%;
     height: 270px;
     padding: 40px;
     line-height: 14px;
@@ -458,6 +457,29 @@ input[type="search"]::-webkit-search-decoration {
       .company .events .event .event-date {
         font-weight: bold;
         color: #73ad34; }
+
+.calendar {
+  font-weight: bold;
+  text-align: center;
+  border-spacing: 0;
+  empty-cells: hide;
+  margin: auto; }
+  .calendar th {
+    height: 30px;
+    vertical-align: top; }
+  .calendar td {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #263a54;
+    background-color: #365277;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .calendar td:nth-last-child(1), .calendar td:nth-last-child(2) {
+      background-color: #3e5e89; }
+    .calendar td.event-day {
+      background-color: #73ad34; }
 
 .footer-menu {
   background-color: #003e7e;
