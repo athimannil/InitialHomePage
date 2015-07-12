@@ -62,17 +62,17 @@ Author: 	Muhammed Athimannil
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg); }
-  .next:hover:not(.small) {
-    background-color: #263a54;
-    border: 2px solid #fff; }
-    .next:hover:not(.small):after, .next:hover:not(.small):before {
-      border-color: #fff; }
   .next:before {
     top: 6px;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg); }
+  .next:hover:not(.small) {
+    background-color: #263a54;
+    border: 2px solid #fff; }
+    .next:hover:not(.small):after, .next:hover:not(.small):before {
+      border-color: #fff; }
   .next.large {
     right: 20px;
     bottom: 20px; }
@@ -93,6 +93,50 @@ Author: 	Muhammed Athimannil
       bottom: 2px; }
     .next.small:before {
       top: 2px; }
+
+.up {
+  background-color: #73ad34;
+  width: 34px;
+  height: 34px;
+  -webkit-border-radius: 17px;
+  -moz-border-radius: 17px;
+  border-radius: 17px;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+  .up:after, .up:before {
+    border-color: #fff; }
+  .up:after {
+    left: 6px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg); }
+  .up:before {
+    right: 6px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg); }
+  .up:hover {
+    background-color: #8dc94b;
+    /* border: 2px solid $light-green;
+    &:after,
+    &:before{
+    	border-color: $light-green;
+    } */ }
 
 .carousel-arrow {
   background-color: #fff;
@@ -236,7 +280,8 @@ h1, h2, h3, h4, h5 {
 a {
   text-decoration: none; }
   a:active, a:hover {
-    outline: 0; }
+    outline: 0;
+    text-decoration: underline; }
 
 ul {
   list-style-type: none;
@@ -251,7 +296,13 @@ footer {
 .container {
   width: 1210px;
   margin: 0 auto;
-  padding-top: 35px; }
+  padding-top: 35px;
+  position: relative; }
+
+#move-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px; }
 
 header {
   width: 100%;
@@ -287,6 +338,7 @@ header {
   float: right;
   margin: 30px 0; }
   .connect input[type=search] {
+    -webkit-appearance: none;
     float: right;
     height: 45px;
     width: 385px;
@@ -350,12 +402,12 @@ nav {
   margin-bottom: 20px; }
   nav > ul {
     float: right; }
-    nav > ul li {
+    nav > ul > li {
       float: left;
       position: relative; }
-      nav > ul li:hover ul {
+      nav > ul > li:hover ul {
         display: block; }
-      nav > ul li a {
+      nav > ul > li a {
         display: inline-block;
         color: #003e7e;
         text-transform: uppercase;
@@ -367,12 +419,13 @@ nav {
         -ms-transition: all 0.25s ease-out 0s;
         -o-transition: all 0.25s ease-out 0s;
         transition: all 0.25s ease-out 0s; }
-        nav > ul li a:hover {
+        nav > ul > li a:hover {
           background-color: #263a54;
-          color: #fff; }
-        nav > ul li a.arrow-down {
+          color: #fff;
+          text-decoration: none; }
+        nav > ul > li a.arrow-down {
           padding-right: 25px; }
-          nav > ul li a.arrow-down:before, nav > ul li a.arrow-down:after {
+          nav > ul > li a.arrow-down:before, nav > ul > li a.arrow-down:after {
             display: block;
             content: '';
             -webkit-box-sizing: border-box;
@@ -390,20 +443,22 @@ nav {
             border: 1px solid #263A54;
             height: 0px;
             width: 7px; }
-          nav > ul li a.arrow-down:after {
+          nav > ul > li a.arrow-down:after {
             right: 11px;
             -webkit-transform: rotate(45deg);
             -moz-transform: rotate(45deg);
             -ms-transform: rotate(45deg);
             -o-transform: rotate(45deg); }
-          nav > ul li a.arrow-down:before {
+          nav > ul > li a.arrow-down:before {
             right: 7px;
             -webkit-transform: rotate(-45deg);
             -moz-transform: rotate(-45deg);
             -ms-transform: rotate(-45deg);
             -o-transform: rotate(-45deg); }
-          nav > ul li a.arrow-down:hover:before, nav > ul li a.arrow-down:hover:after {
+          nav > ul > li a.arrow-down:hover:before, nav > ul > li a.arrow-down:hover:after {
             border-color: #fff; }
+        nav > ul > li a ~ li {
+          background-color: #f00; }
     nav > ul ul {
       display: none;
       position: absolute;

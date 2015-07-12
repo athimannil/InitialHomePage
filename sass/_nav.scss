@@ -4,7 +4,7 @@ nav{
 	margin-bottom: 20px;
 	> ul{
 		float: right;
-		li{
+		> li{
 			float: left;
 			position: relative;
 			&:hover{
@@ -23,6 +23,7 @@ nav{
 				&:hover{
 					background-color: $primary-color;
 					color: $white;
+					text-decoration: none;
 				}
 				&.arrow-down{
 					padding-right: 25px;
@@ -55,6 +56,9 @@ nav{
 						}
 					}
 				}
+				 ~ li{
+				 	background-color: #f00;
+				 }
 			}
 		}
 		ul{
