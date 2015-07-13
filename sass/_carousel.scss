@@ -2,6 +2,9 @@
 	width: 100%;
 	margin-bottom: 45px;
 }
+.main-carousel{
+	width: 100%;
+}
 .carousel-wrap{
 	display: table;
 	table-layout: fixed;
@@ -20,6 +23,7 @@
 		background-color: $secondary-color;
 		color: $white;
 		padding: 40px;
+		position: relative;
 		@include boxsizing;
 		h1,
 		h2{

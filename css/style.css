@@ -509,6 +509,9 @@ nav {
   width: 100%;
   margin-bottom: 45px; }
 
+.main-carousel {
+  width: 100%; }
+
 .carousel-wrap {
   display: table;
   table-layout: fixed;
@@ -527,6 +530,7 @@ nav {
     background-color: #003e7e;
     color: #fff;
     padding: 40px;
+    position: relative;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
