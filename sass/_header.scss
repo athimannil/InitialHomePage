@@ -38,6 +38,7 @@ header{
 	float: right;
 	margin: 30px 0;
 	input[type=search]{
+		-webkit-appearance: none;
 		float: right;
 		height: 45px;
 		width: 385px;
