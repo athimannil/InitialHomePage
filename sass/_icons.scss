@@ -158,6 +158,14 @@
 		&:after{
 			right: 100%;
 			border-right-color: $primary-color;
+			@media (max-width: $tablet) {
+				border-right-color: transparent;
+				border-bottom-color: $primary-color;
+				bottom: 100%;
+				top: auto;
+				right: 0;
+				left: 0;
+			}
 		}
 	}
 	&.buble-right{

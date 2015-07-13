@@ -32,10 +32,14 @@ footer{
 	overflow: hidden;
 }
 .container{
-	width: 1210px;
+	width: 100%;
+	max-width: $largeScreen;
 	margin: 0 auto;
 	padding-top: 35px;
 	position: relative;
+	@media (max-width: $tablet) {
+		padding-top: 20px;
+	}
 }
 
 #move-top{

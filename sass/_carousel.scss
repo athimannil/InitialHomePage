@@ -10,6 +10,10 @@
 	.brief{
 		display: table-cell;
 		width: 50%;
+		@media (max-width: $tablet) {
+			width: 100%;
+			float: left;
+		}
 	}
 	.brief{
 		vertical-align: top;
@@ -20,7 +24,6 @@
 		h1,
 		h2{
 			font-size: 30px;
-			// line-height: 30px;
 		}
 		h1{
 			font-weight: normal;
@@ -28,21 +31,25 @@
 		p{
 			line-height: 14px;
 		}
+
 	}
 	.thumb-img{
 		img{
-			width: 100%;
+			// width: 100%;
 			float: left;
+			@media (max-width: $tablet) {
+				width: 100%;
+			}
 		}
 	}
 }
 .rest-carousel{
 	width: 50%;
-	float: left;
-	.brief{
-		// width: 50%;
-		// height: 270px;
+	@media (max-width: $mobile) {
+		width: 100%;
 	}
+
+	float: left;
 	&.second-sect{
 		.brief{
 			background-color: #263a54;
@@ -54,6 +61,10 @@
 			&.buble-left{
 				&:after{
 					border-right-color: #d5dadf;
+					@media (max-width: $tablet) {
+						border-right-color: transparent;
+						border-bottom-color: #d5dadf;
+					}
 				}
 			}
 		}

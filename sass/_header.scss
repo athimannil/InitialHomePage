@@ -4,21 +4,33 @@ header{
 }
 #logo{
 	float: left;
+	width: 250px;
+	display: block;
+	@media (max-width: $tablet) {
+		float: none;
+		margin: auto;
+	}
 }
 .contact{
 	float: right;
+	margin-top: 10px;
+	padding-right: 10px;
+	@media (max-width: $tablet) {
+		float: left;
+	}
 	li{
 		display: inline-block;
-		height: 15px;
+		// height: 15px;
 		line-height: 18px;
 		margin-left: 33px;
 		color: $secondary-color;
 		padding-left: 20px;
+		margin-bottom: 10px;
 		background-position: center left;
 		background-repeat: no-repeat;
 		background-image: url(../img/pointer.png);
-		&:last-child{
-			margin-left: 50px;
+		@media (max-width: $tablet) {
+			margin-left: 20px;
 		}
 		&.address{
 			background-image: url(../img/pointer.png);
@@ -36,7 +48,14 @@ header{
 }
 .connect{
 	float: right;
-	margin: 30px 0;
+	margin: 10px 0;
+	padding: 0 10px;
+	@media (max-width: $tablet) {
+		width: 100%;
+		margin: 10px 0;
+		@include boxsizing;
+	}
+
 	input[type=search]{
 		-webkit-appearance: none;
 		float: right;
@@ -62,14 +81,20 @@ header{
 		&:-ms-input-placeholder {  
 		   color: $white;  
 		}
+		@media (max-width: $tablet) {
+			width: 100%;
+			margin-bottom: 5px;
+		}
 	}
 }
 .social-media{
 	margin-top: 7px;
 	float: right;
+	@media (max-width: $tablet) {
+	}
 	li{
 		display: inline-block;
-		margin: 0 17px;
+		margin: 0 17px 7px 17px;
 		a{
 			display: block;
 			@include circle(32px);
@@ -100,6 +125,11 @@ header{
 				&:hover{
 					background-color: #FF8300;
 				}
+			}
+		}
+		&:last-child{
+			@media (max-width: $tablet) {
+				margin-right: 0;
 			}
 		}
 	}

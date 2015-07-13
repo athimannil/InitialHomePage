@@ -8,6 +8,13 @@
 		padding: 37px 33px 25px;
 		position: relative;
 		@include boxsizing;
+		@media (max-width: $tablet){
+			width: 50%;
+		}
+		@media (max-width: $mobile){
+			width: 100%;
+			height: auto;
+		}
 		h3{
 			font-size: 30px;
 			margin: 0 0 23px;
@@ -51,16 +58,40 @@
 		width: 50%;
 		color: $white;
 		padding: 0;
+		@media (max-width: $tablet){
+			width: 100%;
+		}
+		@media (max-width: $mobile){
+			height: auto;
+		}
 		> div{
 			width: 50%;
 			height: 271px;
 			float: left;
-			// border: 1px solid #ff0;
 			@include boxsizing;
+			@media (max-width: $mobile){
+				width: 100%;
+				height: auto;
+			}
 		}
 		.title{
 			background-color: $secondary-color;
 			padding: 35px;
+			@media (max-width: $mobile){
+				&:after{
+					right: 0;
+					top: 100%;
+					left: 0;
+					border-left-color: transparent;
+					border-top-color: $secondary-color;
+				}
+			}
+			h3{
+				@media (max-width: $mobile){
+					margin: 0;
+					text-align: center;
+				}
+			}
 		}
 		.month{
 			background-color: $primary-color;
@@ -69,7 +100,7 @@
 		.day{
 			background-color: $date-bg;
 			text-align: center;
-			padding-top: 30px;
+			padding: 30px;
 			.event-day{
 				font-size: 200px;
 				font-weight: bold;
