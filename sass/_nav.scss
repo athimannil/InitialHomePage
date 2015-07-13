@@ -25,14 +25,10 @@ nav{
 					color: $white;
 				}
 				&.arrow-down{
-
-
 						&:before, 
 						&:after{ 
 								display:block;
 						    content: "";
-						    // box-sizing: border-box;
-						    // transition: border-color 0.25s ease 0s;
 						    position: absolute;
 						    top: 0px;
 						    right: 0px;
