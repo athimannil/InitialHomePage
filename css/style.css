@@ -291,6 +291,10 @@ a {
     outline: 0;
     text-decoration: underline; }
 
+a, img {
+  border: none;
+  outline: none; }
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -357,6 +361,8 @@ header {
       background-image: url(../img/envelop.png); }
     .contact li.telephone {
       background-image: url(../img/telephone.png); }
+    .contact li.language {
+      background-image: url(../img/down-arrow.png); }
     .contact li a {
       color: #003e7e; }
 

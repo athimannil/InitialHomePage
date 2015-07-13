@@ -21,6 +21,10 @@ a{
 	  text-decoration: underline;
 	}
 }
+a, img {
+    border:none;
+    outline:none
+}
 ul{
 	list-style-type: none;
 	margin: 0;
