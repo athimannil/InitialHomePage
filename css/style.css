@@ -481,7 +481,18 @@ nav {
   .carousel-wrap .brief {
     vertical-align: top;
     background-color: #003e7e;
-    color: #fff; }
+    color: #fff;
+    padding: 40px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .carousel-wrap .brief h1,
+    .carousel-wrap .brief h2 {
+      font-size: 30px; }
+    .carousel-wrap .brief h1 {
+      font-weight: normal; }
+    .carousel-wrap .brief p {
+      line-height: 14px; }
   .carousel-wrap .thumb-img img {
     width: 100%;
     float: left; }
@@ -489,15 +500,6 @@ nav {
 .rest-carousel {
   width: 50%;
   float: left; }
-  .rest-carousel .brief {
-    height: 270px;
-    padding: 40px;
-    line-height: 14px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-    .rest-carousel .brief h2 {
-      font-size: 30px; }
   .rest-carousel.second-sect .brief {
     background-color: #263a54; }
   .rest-carousel.third-sect .brief {

@@ -15,6 +15,19 @@
 		vertical-align: top;
 		background-color: $secondary-color;
 		color: $white;
+		padding: 40px;
+		@include boxsizing;
+		h1,
+		h2{
+			font-size: 30px;
+			// line-height: 30px;
+		}
+		h1{
+			font-weight: normal;
+		}
+		p{
+			line-height: 14px;
+		}
 	}
 	.thumb-img{
 		img{
@@ -28,13 +41,7 @@
 	float: left;
 	.brief{
 		// width: 50%;
-		height: 270px;
-		padding: 40px;
-		line-height: 14px;
-		@include boxsizing;
-		h2{
-			font-size: 30px;
-		}
+		// height: 270px;
 	}
 	&.second-sect{
 		.brief{
